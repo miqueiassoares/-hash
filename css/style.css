@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+:root {
+    /* paleta de cores */
+    --background: #012340;
+    --font1: #54cda1;
+    --font2: #027333;
+    --color-x: #04D939;
+    --color-o: #03A63C;
+}
+
+html, body {
+    background-color: var(--background);
+    color: var(--font1);
+    position: relative;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: var(--background);
+}
+
+/* SELECIOINAR JOGADOR QUE VAI COMEÇAR JOGANDO */
+
+.selecionar {
+    width: 200px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.selecionar>h1 {
+    font-size: 1.5rem;
+    line-height: 44px;
+    letter-spacing: 3px;
+}
+
+.selecionar>div {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.escolha {
+    font-size: 2rem;
+    width: 40%;
+    display: inline-block;
+    cursor: pointer;
+    opacity: .5;
+}
+.escolha:hover {
+    opacity: 1;
+}
+
+#bolinha {
+    background-color: aqua;
+    color: #030b11;
+}
+
+#x {
+    background-color: #00ec3b;
+    color: #030b11;
+}
+
+/* MAPA */
+
+#map {
+    background-color: var(--font1);
+    width: 300px;
+    height: 300px;
+    margin: 50px auto 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 3px;
+    transition: box-shadow .6s;
+}
+
+#map:hover {
+    box-shadow: 0px 0px 10px 0px var(--font1);
+}
+
+.cell {
+    background-color: #030b11;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background .3s;
+    font-size: 4rem;
+}
+
+.cell:hover {
+    background-color: var(--background);
+}
+
+.cell-X {
+    color: #00ec3b;
+}
+
+.cell-O {
+    color: aqua;
+}
+
+/* MARCADOR DE VEZ */
+
+.vez {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: center;
+}
+.vez>h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(240, 248, 255, 0.607);
+    font-size: 1rem;
+}
+.vez>span {
+    display: block;
+    font-size: 1.2rem;
+}
+.vez-x {
+    color: #00ec3b;
+    background-color: #030b11;
+}
+.vez-o {
+    color: aqua;
+    background-color: #030b11;
+}
