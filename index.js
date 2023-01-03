@@ -21,7 +21,7 @@ function estaContido(elemento, lista) {
 }
 
 function ganhouVerificar(listaDoJogador) {
-    let jogada = [];
+    let jogada;
     let ganhou = false;
     for (jogada of jogosPossiveis) {
         ganhou = jogada.every(function(elemento) {
@@ -35,10 +35,10 @@ function ganhouVerificar(listaDoJogador) {
 
 function mudarVez(vez, start) {
     if (start === 1) {
-        vez.classList.remove = "vez-x";
+        vez.classList.remove("vez-x");
         vez.classList = "vez-o";
     } else {
-        vez.classList.remove = "vez-o";
+        vez.classList.remove("vez-o");
         vez.classList = "vez-x";
     }
     vez.textContent = start === 2 ? "X" : "O";
@@ -54,9 +54,9 @@ function subirModal(ganhou, start, index) {
         ganhador.style.color = start === 1 ? "#00ec3b" : "aqua";
         document.querySelector(".ganhou>span").style.color = start === 1 ? "#00ec3b" : "aqua";
     } else if (index === 9) {
-        document.querySelector(".empate").style.display = "block";
+        const empate = document.querySelector(".empate");
+        empate.style.display = "block";
     }
-
 }
 
 function game(start, vez) {
