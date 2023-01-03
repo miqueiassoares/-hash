@@ -18,20 +18,31 @@
             </div>
         </div>
         <div class="vez">
-            <h2>Vez:</h2>
-            <span class="vez-o">...</span>
+            <h2>Jogador da vez:</h2>
+            <span id="vez" class="vez-o">...</span>
         </div>
         <span id="aviso">Selecione uma opção acima para começar...</span>
         <div id="map">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+            <div class="cell" id="1"></div>
+            <div class="cell" id="2"></div>
+            <div class="cell" id="3"></div>
+            <div class="cell" id="4"></div>
+            <div class="cell" id="5"></div>
+            <div class="cell" id="6"></div>
+            <div class="cell" id="7"></div>
+            <div class="cell" id="8"></div>
+            <div class="cell" id="9"></div>
+        </div>
+        <div class="modal-container">
+            <div class="modal">
+                <div class="ganhou">
+                    <p>O jogador <span class="ganhador"></span> ganhou</p>
+                    <span>Parabéns!</span>
+                </div>
+                <div class="empate">
+                    <p>Empate!</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
